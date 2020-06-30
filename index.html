@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <style>
+            label
+            {
+                font-size: 35px;
+                font-style: italic;
+                color: brown;
+            }
+        </style>
+    </head>
+    <body>
+
+        <label>Function to generate the random number</label><br><br>
+        <input type="text" id="random_number">
+        &nbsp;
+            &nbsp;
+                <button onclick="myRandomNumberFunction()">Click here</button>
+        <br>
+            <br>
+                <label>Function to return sum by getting two parameters</label>
+        <br>
+            <br>
+        <span>enter input values to sum</span>
+        <br>
+            <br>
+        <input type="number" id="parameter_1" placeholder="parameter 1">
+            &nbsp;
+                &nbsp;
+                    +&nbsp;
+        <input type="number" id="parameter_2" placeholder="parameter 2">
+            &nbsp;
+                &nbsp;=
+        <input type="number" id="answer" placeholder="sum value">
+            <br>
+                <br>
+                    <button onclick="myParameterFunction()">Click here</button>
+        <br>
+            <br>
+        <label>Calculator</label>
+            <br>
+                <br>
+        <input type="number" id="parameter1" placeholder="parameter 1">
+            &nbsp;
+                &nbsp;
+                    &nbsp;
+        <input type="number" id="parameter2" placeholder="parameter 2">
+            &nbsp;
+                &nbsp;=
+        <input type="number" id="answer_cal" placeholder="sum value">
+            <br>
+                <br>
+                <button onclick="myAdd()">Addition</button>
+        &nbsp;
+            &nbsp;
+                <button onclick="mySub()">Subtraction</button>
+        &nbsp;
+            &nbsp;
+                <button onclick="myMul()">Multiplication</button>
+        &nbsp;
+            &nbsp;
+                <button onclick="myDiv()">Division</button>
+        <script>
+            //  function for random number
+            function myRandomNumberFunction()
+            {
+                var x = Math.floor(Math.random() * 11)
+                document.getElementById("random_number").value = x;
+            }
+
+            //  function for parameter passing
+            function mySumFunction(p1, p2)
+            {   var p1 = parseInt(p1);
+                var p2 = parseInt(p2);
+                var x = p1 + p2;
+                document.getElementById("answer").value = x;
+            }
+            function myParameterFunction()
+            {
+                var p1 = document.getElementById("parameter_1").value;
+                var p2 = document.getElementById("parameter_2").value;
+                mySumFunction(p1, p2);
+            }
+
+            //  functions for calculator
+            function myAdd()
+            {
+                var p1 = document.getElementById("parameter1").value;
+                var p2 = document.getElementById("parameter2").value;
+                p1 = parseInt(p1);
+                p2 = parseInt(p2);
+                var x = p1 + p2;
+                document.getElementById("answer_cal").value = x;
+            }
+
+            function mySub()
+            {
+                var p1 = document.getElementById("parameter1").value;
+                var p2 = document.getElementById("parameter2").value;
+                p1 = parseInt(p1);
+                p2 = parseInt(p2);
+                var x = p1 - p2;
+                document.getElementById("answer_cal").value = x;
+            
+            }
+
+            function myMul()
+            {
+                var p1 = document.getElementById("parameter1").value;
+                var p2 = document.getElementById("parameter2").value;
+                p1 = parseInt(p1);
+                p2 = parseInt(p2);
+                var x = p1 * p2;
+                document.getElementById("answer_cal").value = x;
+            }
+            
+            function myDiv()
+            {
+                var p1 = document.getElementById("parameter1").value;
+                var p2 = document.getElementById("parameter2").value;
+                p1 = parseInt(p1);
+                p2 = parseInt(p2);
+                var x = p1 / p2;
+                document.getElementById("answer_cal").value = x;
+            }
+        </script>
+    </body>
+</html>
